@@ -1,0 +1,117 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #100c16;
+  color: #f9eaf0;
+  font-family: Georgia, serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #d88aa9;
+  color: white;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(231, 177, 198, 0.16);
+  backdrop-filter: blur(15px);
+}
+
+.glow {
+  box-shadow: 0 0 35px rgba(216, 117, 157, 0.12);
+}
+
+.romantic-gradient {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(131, 56, 98, 0.22),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(99, 52, 111, 0.2),
+      transparent 35%
+    ),
+    #100c16;
+}
+
+.hero-title {
+  background: linear-gradient(
+    120deg,
+    #fff1f6,
+    #e6a8c3,
+    #fff1f6
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.flower {
+  transition: transform 0.3s ease;
+}
+
+.flower:hover {
+  transform: scale(1.25) rotate(10deg);
+}
+
+.letter-open {
+  animation: fadeUp 0.5s ease both;
+}
+
+::placeholder {
+  color: #9d8494;
+}
+
+input {
+  color: #fff1f6;
+}
+
+audio {
+  width: 100%;
+  accent-color: #d88aa9;
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    line-height: 1.15;
+  }
+}
